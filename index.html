@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<title>HTML Tutorial</title>
+<body>
+  <h1>нудно на карантині?</h1>
+  <h2 id="randomAcivity"></h2>
+  <h2>
+    <a id="trigger" href>вибрати випадкову активність</a>
+  </h2>
+
+  <script>
+
+    // const fileUrl = 'https://gist.githubusercontent.com/deny7ko/3336959b7dc02e164d11bae9ddf733b8/raw/707d5a117ff3e2b96d3a3998727c652512d31b13/activities'
+    const activities = []
+    fetch('activities.txt')
+      .then( reader => reader.text() )
+      .then( text => {
+        activities = text.split("\n")
+      })
+
+    function pickActivity () {
+      const activities = ['гуляти', 'пити', 'їсти']
+      const randomActivityIndex = Math.floor(Math.random() * activities.length)
+      document.getElementById('randomAcivity').innerHTML = activities[randomActivityIndex];
+    }
+
+    function onActivityClick (event) {
+      event.preventDefault()
+
+      pickActivity()
+    }
+
+    document.addEventListener('click', onActivityClick)
+  </script>
+</body>
+</html>
