@@ -9,25 +9,35 @@
   </h2>
 
   <script>
+    // let's load activities before user click
+    async function loadActivities () {
+      let response = await fetch('https://raw.githubusercontent.com/deny7ko/what-to-do/master/activities.txt')
+      let data = await response.text()
 
-    // const fileUrl = 'https://gist.githubusercontent.com/deny7ko/3336959b7dc02e164d11bae9ddf733b8/raw/707d5a117ff3e2b96d3a3998727c652512d31b13/activities'
-    const activities = []
-    fetch('activities.txt')
-      .then( reader => reader.text() )
-      .then( text => {
-        activities = text.split("\n")
-      })
+      return data.split("\n").filter(el => el != ""); // there is "" as the last item in the list
+    }
 
-    function pickActivity () {
-      const activities = ['гуляти', 'пити', 'їсти']
+    let activities = loadActivities()
+    //
+
+    function pickActivity (activities) {
       const randomActivityIndex = Math.floor(Math.random() * activities.length)
-      document.getElementById('randomAcivity').innerHTML = activities[randomActivityIndex];
+      return activities[randomActivityIndex]
+    }
+
+    function showActivity (activity) {
+      document.getElementById('randomAcivity').innerHTML = activity;
     }
 
     function onActivityClick (event) {
       event.preventDefault()
 
-      pickActivity()
+      activities
+        .then(activities => {
+          const activity = pickActivity(activities)
+          showActivity(activity)
+        })
+        .catch(reason => console.log(reason.message))
     }
 
     document.addEventListener('click', onActivityClick)
