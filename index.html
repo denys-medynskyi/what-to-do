@@ -18,7 +18,7 @@
   <script>
     // let's load activities before user click
     async function loadActivities () {
-      let response = await fetch('https://raw.githubusercontent.com/deny7ko/what-to-do/master/activities.txt')
+      let response = await fetch('https://raw.githubusercontent.com/deny7ko/what-to-do/master/activities.json')
       let data = await response.text()
 
       return data.split("\n").filter(el => el != ""); // there is "" as the last item in the list
@@ -33,7 +33,28 @@
     }
 
     function showActivity (activity) {
-      document.getElementById('js-random-activity-container').innerHTML = activity;
+      const container = document.getElementById('js-random-activity-container')
+      container.innerText = ''
+      container.appendChild(activity)
+    }
+
+    function transformActivityIntoHtml (activity) {
+      if (/(http(s?)):\/\//i.test(activity)) {
+
+      } else {
+        createTextActivity(activity)
+      }
+    }
+
+    function createLinkActivity (activity) {
+      const element = document.createElement('a')
+      element.href = 'https://www.khanacademy.org/'
+      element.innerText = activity
+    }
+
+    function createTextActivity (activity) {
+      const element = document.createElement('span')
+      element.innerText = activity
     }
 
     function onActivityClick (event) {
@@ -42,7 +63,8 @@
       activities
         .then(activities => {
           const activity = pickActivity(activities)
-          showActivity(activity)
+          const htmlActivity = transformActivityIntoHtml()
+          showActivity(htmlActivity)
         })
         .catch(reason => console.log(reason.message))
     }
