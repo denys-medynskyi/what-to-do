@@ -7,11 +7,13 @@
   <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
-  <h1>Що робить на карантині?</h1>
-  <h2 id="randomAcivity"></h2>
-  <h2>
-    <a id="trigger" href>вибрати випадкову активність</a>
-  </h2>
+  <section class="container">
+    <h1>Що робить на карантині</h1>
+    <h2 id="js-random-activity-container">?</h2>
+    <h2>
+      <a id="js-random-activity-trigger" href>вибрати випадкову активність</a>
+    </h2>
+  </section>
 
   <script>
     // let's load activities before user click
@@ -31,7 +33,7 @@
     }
 
     function showActivity (activity) {
-      document.getElementById('randomAcivity').innerHTML = activity;
+      document.getElementById('js-random-activity-container').innerHTML = activity;
     }
 
     function onActivityClick (event) {
@@ -45,7 +47,7 @@
         .catch(reason => console.log(reason.message))
     }
 
-    document.addEventListener('click', onActivityClick)
+    document.getElementById('js-random-activity-trigger').addEventListener('click', onActivityClick)
   </script>
 </body>
 </html>
