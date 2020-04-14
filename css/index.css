@@ -7,10 +7,15 @@ a {
 /*  */
 
 .container {
-  align-items: center;
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.as-column {
   flex-direction: column;
 }
+
 
 /* typography */
 
@@ -56,5 +61,21 @@ html {
 /* circles */
 
 .circle {
-  border-radius: 50%
+  border-radius: 50%;
+  box-shadow: 0px 4px 100px rgba(84, 0, 190, 0.1);
+  margin: 50px auto;
+  height: 690px;
+  width: 690px;
+}
+
+/* main page */
+
+
+
+.image-container {
+  padding-bottom: 45px;
+}
+
+.title-container {
+  padding-bottom: 25px;
 }

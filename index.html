@@ -3,15 +3,21 @@
 
 <head>
   <title>Що робить?</title>
-
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
-  <section class="container">
-    <img width="280" height="290" src="public/boy.svg"/>
-    <h1 id="js-random-activity-container" class="title">What to do?</h1>
-    <a class="btn" id="js-random-activity-trigger" href>Find Activity</a>
-  </section>
+  <div class="circle container">
+    <section class="container as-column">
+      <div class="image-container">
+        <img width="280" height="290" src="public/boy.svg"/>
+      </div>
+      <div class="title-container">
+        <h1 id="js-random-activity-container" class="title">What to do?</h1>
+      </div>
+      <a class="btn" id="js-random-activity-trigger" href>Find Activity</a>
+    </section>
+  </div>
 
   <script>
     // let's load activities before user click
