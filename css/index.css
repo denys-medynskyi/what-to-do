@@ -1,9 +1,53 @@
+/* overrides */
+
+a {
+  text-decoration: none;
+}
+
+/*  */
+
 .container {
   align-items: center;
   display: flex;
   flex-direction: column;
 }
 
-.container > * {
-  flex: 1;
+/* typography */
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy-ExtraBold.otf');
+  font-weight: 800;
+  font-style: bold;
+}
+
+html {
+  font-family: Gilroy;
+}
+
+.title {
+  color: #8E59FF;;
+  font-weight: 800;
+  font-size: 62px;
+}
+
+/* forms */
+
+.btn {
+  background: #8E59FF;;
+  border-radius: 100px;
+  box-shadow: 4px 4px 30px rgba(20, 0, 255, 0.25);
+  color: white;
+  font-size: 22px;
+  line-height: 27px;
+  font-weight: normal;
+  display: block;
+  padding: 25px 60px;
+  text-align: center;
+}
+
+/* circles */
+
+.circle {
+  border-radius: 50%
 }
