@@ -4,12 +4,27 @@ a {
   text-decoration: none;
 }
 
+html {
+  background-image: url("../images/background-purple.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 /*  */
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+}
 
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: fit-content;
 }
 
 .as-column {
@@ -23,14 +38,13 @@ a {
   font-family: 'Gilroy';
   src: url('../fonts/Gilroy-ExtraBold.otf');
   font-weight: 800;
-  font-style: bold;
 }
 
 @font-face {
   font-family: 'Gilroy';
-  src: url('../fonts/Gilroy-Light.otf');
-  font-weight: 400;
-  font-style: normal;
+  src: url('../fonts/Gilroy-Bold.ttf');
+  font-weight: 600;
+  font-style: bold;
 }
 
 html {
@@ -56,20 +70,10 @@ html {
   display: block;
   padding: 25px 60px;
   text-align: center;
-}
-
-/* circles */
-
-.circle {
-  border-radius: 50%;
-  box-shadow: 0px 4px 100px rgba(84, 0, 190, 0.1);
-  margin: 50px auto;
-  height: 690px;
-  width: 690px;
+  font-weight: 600;
 }
 
 /* main page */
-
 
 
 .image-container {
