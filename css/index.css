@@ -5,9 +5,8 @@ a {
 }
 
 html {
-  background-image: url("../images/background-purple.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: url('../images/background-purple.svg') no-repeat center fixed;
+  background-size: 100% 100%;
 }
 
 /*  */
@@ -24,7 +23,6 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: fit-content;
 }
 
 .as-column {
@@ -54,7 +52,7 @@ html {
 .title {
   color: #8E59FF;;
   font-weight: 800;
-  font-size: 62px;
+  font-size: 2rem;
 }
 
 /* forms */
@@ -64,22 +62,26 @@ html {
   border-radius: 100px;
   box-shadow: 4px 4px 30px rgba(20, 0, 255, 0.25);
   color: white;
-  font-size: 22px;
-  line-height: 27px;
-  font-weight: normal;
   display: block;
-  padding: 25px 60px;
+  padding: 1rem 2rem;
   text-align: center;
   font-weight: 600;
+  font-size: 1.5rem;
 }
 
 /* main page */
 
-
 .image-container {
-  padding-bottom: 45px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+.image-container img {
+  width: 75%;
+  height: auto;
 }
 
 .title-container {
-  padding-bottom: 25px;
+  padding-bottom: 2rem;
 }
