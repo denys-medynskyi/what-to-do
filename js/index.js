@@ -3,27 +3,41 @@ async function loadActivities () {
   let response = await fetch('https://raw.githubusercontent.com/deny7ko/what-to-do/master/activities.json')
   let data = await response.json()
 
-  return data; // there is "" as the last item in the list
+  return data;
 }
 
+const START_COLOR = '#8E59FF';
+const STOP_COLOR = '#F3BC55';
+
 loadActivities().then(activities => {
-  let onStartClick = startGenerating.bind(null, activities);
+  let onStartClick = startClickFn.bind(null, activities);
   let generatingTriggerElement = document.getElementById('js-random-activity-trigger');
 
   generatingTriggerElement.addEventListener('click', onStartClick);
-  // generatingTriggerElement.addEventListener('click', onStopClick);
 }).catch(reason => console.log(reason.message));
 
-function startGenerating (activities, event) {
+function startClickFn(activities, event) {
   event.preventDefault();
+  event.target.style.backgroundColor = STOP_COLOR;
+  event.target.innerText = 'Stop'
 
+  if (window.generatingStartedInterval) {
+    clearInterval(window.generatingStartedInterval);
+    event.target.innerText = 'Another one?'
+    event.target.style.backgroundColor = START_COLOR;
+    window.generatingStartedInterval = null;
+    return
+  }
+
+  window.generatingStartedInterval = startGenerating(activities)
+}
+
+function startGenerating (activities) {
   return setInterval(() => {
     const activity = pickActivity(activities);
     showActivity(activity)
   }, 200)
 }
-
-
 
 function pickActivity (activities) {
   const randomActivityIndex = Math.floor(Math.random() * activities.length)
@@ -31,8 +45,6 @@ function pickActivity (activities) {
 }
 
 function showActivity (activity) {
-  // let element = createActivityElement(activity);
-  // debugger
   const activityContainer = document.getElementById('js-random-activity-container')
   activityContainer.innerHTML = activity.title;
   activityContainer.style.color = randomColor();
