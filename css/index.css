@@ -8,7 +8,6 @@ a {
 
 html {
   background: url('../images/background-purple.svg') no-repeat center fixed;
-  background-size: 100% 100%;
 }
 
 /*  */
@@ -85,6 +84,19 @@ html {
 }
 
 .title-container {
-  padding-bottom: 2rem;
   text-align: center;
+}
+
+/* random activity */
+
+.random-activity-link {
+  color: black;
+  text-decoration: underline;
+  display: inline-block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.is-hidden {
+  visibility: hidden;
 }

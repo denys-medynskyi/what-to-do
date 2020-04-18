@@ -18,6 +18,8 @@ loadActivities().then(activities => {
 
 function startClickFn(activities, event) {
   event.preventDefault();
+  hideActivityLink();
+
   event.target.style.backgroundColor = STOP_COLOR;
   event.target.innerText = 'Stop'
 
@@ -26,6 +28,7 @@ function startClickFn(activities, event) {
     event.target.innerText = 'Another one?'
     event.target.style.backgroundColor = START_COLOR;
     window.generatingStartedInterval = null;
+    showActivityLink();
     return
   }
 
@@ -48,6 +51,28 @@ function showActivity (activity) {
   const activityContainer = document.getElementById('js-random-activity-container')
   activityContainer.innerHTML = activity.title;
   activityContainer.style.color = randomColor();
+
+  if (activity.url) {
+    const activityLink = findActivityLink()
+    if (!activityLink) {
+      debugger
+    }
+    activityLink.href = activity.url;
+  }
+}
+
+function findActivityLink () {
+  return document.getElementById('js-random-activity-link');
+}
+
+function showActivityLink () {
+  const activityLink = findActivityLink()
+  activityLink.classList.remove('is-hidden');
+}
+
+function hideActivityLink () {
+  const activityLink = findActivityLink()
+  activityLink.classList.add('is-hidden');
 }
 
 function randomColor () { return "#" + Math.floor(Math.random()*16777215).toString(16) }
