@@ -52,7 +52,7 @@ html {
 .title {
   color: #8E59FF;;
   font-weight: 800;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 /* forms */
@@ -84,4 +84,5 @@ html {
 
 .title-container {
   padding-bottom: 2rem;
+  text-align: center;
 }
