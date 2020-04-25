@@ -143,11 +143,19 @@ main {
 }
 
 .btn:hover {
-  opacity: .8;
+  background: #A67CFF;
+}
+
+.btn:focus {
+  background: #8155DE;
 }
 
 .btn.secondary {
   background: var(--color-accent-2);
+}
+
+.btn.secondary:focus {
+  background: #E3A800;
 }
 
 /* random activity */
