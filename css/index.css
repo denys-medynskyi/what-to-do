@@ -73,6 +73,18 @@ a {
   text-transform: capitalize;
 }
 
+a:hover {
+  color: #817FB9;
+}
+
+a:active {
+  color: #373576
+}
+
+a:disabled {
+  color: #D3DCE6;
+}
+
 /* global */
 
 html {
@@ -144,10 +156,12 @@ main {
 
 .btn:hover {
   background: #A67CFF;
+  color: white;
 }
 
 .btn:focus {
   background: #8155DE;
+  color: white;
 }
 
 .btn.secondary {
