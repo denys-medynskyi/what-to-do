@@ -3,6 +3,18 @@
 /* #F3BC55: yellow */
 /* #56548C */
 
+/* color variables */
+
+:root {
+  --color-bg-light: #FDFCFF;
+  --color-bg-dark: #FAF7FE;
+  --color-accent: #8E59FF;
+  --color-accent-2: #FBD15B;
+  --color-text-body: #56548C;
+  --color-text-explainers: #7F7EAA;
+  --color-tags: #C7BED3;
+}
+
 /* typography */
 
 @font-face {
@@ -21,8 +33,11 @@ html {
   font-family: Gilroy;
 }
 
+h1, h2, h3, h4, h5, h6, p, b, span {
+  color: var(--color-text-body);
+}
+
 h1 {
-  color: #56548C;
   font-size: 85px;
   line-height: .9;
 }
@@ -43,7 +58,7 @@ h1 {
 /* links */
 
 a {
-  color: #56548C;
+  color: var(--color-text-body);
   font-family: Gilroy;
   font-style: normal;
   font-weight: bold;
@@ -58,6 +73,7 @@ html {
 }
 
 body {
+  background-color: var(--color-bg-light);
   margin: 0 auto;
   max-width: 1250px;
 }
@@ -108,13 +124,17 @@ main {
 /* forms */
 
 .btn {
-  background: #8E59FF;;
+  background: var(--color-accent);
   border-radius: 100px;
   box-shadow: 4px 4px 30px rgba(20, 0, 255, 0.25);
   color: white;
   display: block;
   padding: 17px 35px;
   font-weight: bold;
+}
+
+.btn.secondary {
+  background: var(--color-accent-2);
 }
 
 /* random activity */
