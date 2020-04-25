@@ -249,4 +249,9 @@ main {
 
 .is-animated-pattern {
   animation-name: slide-pattern;
+
+  /* width: 700px;
+  height: 1400px;
+  top: -700px;
+  position: absolute; */
 }
