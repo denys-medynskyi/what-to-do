@@ -148,7 +148,7 @@ main {
 .btn {
   background: var(--color-accent);
   border-radius: 70px;
-  box-shadow: 4px 4px 30px rgba(20, 0, 255, 0.25);
+  box-shadow: 20px 20px 50px rgba(127, 75, 238, 0.3);
   color: white;
   display: block;
   padding: 17px 35px;
