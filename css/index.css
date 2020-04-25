@@ -72,6 +72,10 @@ a {
   line-height: 22px;
   text-decoration: none;
   text-transform: capitalize;
+
+  /* increase hover area */
+  padding: 16px;
+  margin: -16px;
 }
 
 a:hover {
