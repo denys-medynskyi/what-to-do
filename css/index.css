@@ -224,3 +224,29 @@ main {
 .is-hidden {
   display: none;
 }
+
+@keyframes slide-text {
+  from {top: 90px;}
+  to {top: calc(100vh - 200px);}
+}
+
+@keyframes slide-pattern {
+  from {top: 0}
+  to {top: calc(100vh - 200px);}
+}
+
+.is-animated {
+  animation-play-state: paused;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.is-animated-text {
+  animation-name: slide-text;
+}
+
+.is-animated-pattern {
+  animation-name: slide-pattern;
+}
