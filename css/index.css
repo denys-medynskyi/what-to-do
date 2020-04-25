@@ -20,13 +20,13 @@
 @font-face {
   font-family: 'Gilroy';
   src: url('../fonts/Gilroy-ExtraBold.otf');
-  font-style: bolder;
+  font-weight: 800;
 }
 
 @font-face {
   font-family: 'Gilroy';
   src: url('../fonts/Gilroy-Bold.ttf');
-  font-style: bold;
+  font-weight: bold;
 }
 
 html {
@@ -40,6 +40,7 @@ h1, h2, h3, h4, h5, h6, p, b, span {
 h1 {
   font-size: 85px;
   line-height: .9;
+  font-weight: 800;
 }
 
 /* shared */
