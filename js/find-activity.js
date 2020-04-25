@@ -5,14 +5,17 @@
 window.onload = (event) => {
   loadActivities().then(activities => {
     // 1. Onload start generating activity.
-    window.generatingId = startGenerating(activities)
+    window.generatingActivityInProgress = startGenerating(activities)
+    window.animationInProgress = startAnimating()
+
     let stopTrigger = document.getElementById('js-stop-activity-generator')
     let restartTrigger = document.getElementById('js-restart-activity-generator')
 
     // 2. When `Stop` is clicked -> show `Try again`
     stopTrigger.addEventListener('click', (event) => {
       event.preventDefault()
-      clearInterval(window.generatingId);
+      clearInterval(window.generatingActivityInProgress);
+      clearInterval(window.animationInProgress)
 
       hideElement(stopTrigger);
       showElement(restartTrigger);
@@ -21,7 +24,8 @@ window.onload = (event) => {
     // 3. When `Try again` is clicked -> restart generating activity.
     restartTrigger.addEventListener('click', (event) => {
       event.preventDefault()
-      window.generatingId = startGenerating(activities)
+      window.generatingActivityInProgress = startGenerating(activities)
+      window.animationInProgress = startAnimating()
 
       hideElement(restartTrigger);
       showElement(stopTrigger);
@@ -74,3 +78,29 @@ function hideElement (element) {
 }
 
 function randomColor () { return "#" + Math.floor(Math.random()*16777215).toString(16) }
+
+function startAnimating () {
+  // 1. letters are moving
+  // 2. pattern is moving
+  // 3. pattern should have bigger height
+  const animatedImage = document.getElementById('js-animated-image')
+  const animatedImageTwo = document.getElementById('js-animated-image-2')
+
+  return setInterval(() => {
+    let bounding = animatedImage.getBoundingClientRect();
+    animatedImage.style.top = (bounding.top + 1) + 'px';
+    let bounding2 = animatedImageTwo.getBoundingClientRect();
+    animatedImageTwo.style.top = (bounding2.top + 1) + 'px';
+    // let bounding = animatedImage.getBoundingClientRect();
+    // // element inside the screen
+
+    // if (bounding.bottom < window.innerHeight) {
+    //   // move image down
+    //   animatedImage.style.top = (bounding.top + 1) + 'px';
+    // } else  {
+    //   // move image up
+    //   animatedImage.style.top = (bounding.top - 1) + 'px';
+    // }
+
+  }, 10)
+}
