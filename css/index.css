@@ -212,15 +212,15 @@ main {
   margin-bottom: 1rem;
 }
 
-/* utility */
-
-.is-hidden {
-  visibility: hidden;
-}
-
 
 /* find activity page */
 
 .find-activity_text-container {
   margin: 100px 0;
+}
+
+/* js thingies */
+
+.is-hidden {
+  display: none;
 }
