@@ -43,6 +43,11 @@ h1 {
   font-weight: 800;
 }
 
+h2 {
+  font-size: 44px;
+  line-height: 39px;
+}
+
 /* shared */
 
 img {
@@ -59,6 +64,15 @@ img {
 
 .vertical_center {
   align-items: center;
+}
+
+.as-column {
+  flex-direction: column;
+}
+
+.centered {
+  align-items: center;
+  justify-content: center;
 }
 
 /* links */
@@ -174,11 +188,15 @@ main {
   color: white;
 }
 
-.btn.secondary {
+.btn-secondary {
   background: var(--color-accent-2);
 }
 
-.btn.secondary:focus {
+.btn-secondary:hover {
+  background: #FFD96D;
+}
+
+.btn-secondary:focus {
   background: #E3A800;
 }
 
@@ -196,4 +214,11 @@ main {
 
 .is-hidden {
   visibility: hidden;
+}
+
+
+/* find activity page */
+
+.find-activity_text-container {
+  margin: 100px 0;
 }
