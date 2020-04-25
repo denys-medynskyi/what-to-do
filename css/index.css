@@ -52,8 +52,8 @@ img {
   display: flex;
 }
 
-.flex-columns-2 > * {
-  flex: 1;
+.space-between {
+  justify-content: space-between;
 }
 
 .flex-align_center {
@@ -72,6 +72,8 @@ a {
   text-decoration: none;
   text-transform: capitalize;
 }
+
+/* global */
 
 html {
   width: 100vw;
@@ -102,10 +104,6 @@ body {
 
 /* nav */
 
-nav.top-nav {
-  justify-content: flex-end;
-}
-
 nav > * {
   margin-left: 48px;
   align-items: center;
@@ -131,22 +129,21 @@ main {
   margin-right: 48px;
 }
 
-.main-image_container {
-  display: flex;
-  justify-content: flex-end;
-}
-
 
 /* forms */
 
 .btn {
   background: var(--color-accent);
-  border-radius: 100px;
+  border-radius: 70px;
   box-shadow: 4px 4px 30px rgba(20, 0, 255, 0.25);
   color: white;
   display: block;
   padding: 17px 35px;
   font-weight: bold;
+}
+
+.btn:hover {
+  opacity: .8;
 }
 
 .btn.secondary {
