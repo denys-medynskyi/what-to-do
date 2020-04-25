@@ -65,17 +65,12 @@ img {
 
 a {
   color: var(--color-text-body);
-  font-family: Gilroy;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
   text-decoration: none;
   text-transform: capitalize;
-
-  /* increase hover area */
-  padding: 16px;
-  margin: -16px;
 }
 
 a:hover {
@@ -138,14 +133,17 @@ main {
 }
 
 .main-title_container {
-  max-width: 523px;
-  margin-bottom: 38px;
+  max-width: 523px;;
+  padding-top: 38px;
 }
 
-.main-actions > :first-child {
+.main-actions_container {
+  margin-top: 50px;
+}
+
+.main-actions_container > :first-child {
   margin-right: 48px;
 }
-
 
 /* forms */
 
