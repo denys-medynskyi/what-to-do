@@ -57,7 +57,7 @@ img {
   justify-content: space-between;
 }
 
-.flex-align_center {
+.vertical_center {
   align-items: center;
 }
 
@@ -71,6 +71,8 @@ a {
   line-height: 22px;
   text-decoration: none;
   text-transform: capitalize;
+  /* increase click area */
+  padding: 16px;
 }
 
 a:hover {
@@ -117,13 +119,8 @@ body {
 /* nav */
 
 nav > * {
-  margin-left: 48px;
   align-items: center;
   display: flex;
-}
-
-nav > *:first-child {
-  margin-left: 0;
 }
 
 /* main */
