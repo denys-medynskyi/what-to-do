@@ -45,6 +45,7 @@ h1 {
 
 h2 {
   font-size: 44px;
+  font-weight: 800;
   line-height: 39px;
 }
 
@@ -190,6 +191,7 @@ main {
 
 .btn-secondary {
   background: var(--color-accent-2);
+  box-shadow: 20px 20px 50px rgba(238, 222, 75, 0.3);
 }
 
 .btn-secondary:hover {
