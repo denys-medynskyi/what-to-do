@@ -65,7 +65,7 @@ body {
 /* header */
 
 .main-header {
-  padding: 50px 50px 0 50px;
+  padding: 37px 50px 0 50px;
 }
 
 /* nav */
@@ -87,7 +87,7 @@ nav > *:first-child {
 /* main */
 
 main {
-  padding: 50px 100px;
+  padding: 80px 100px 0 100px;
 }
 
 .main-title_container {
