@@ -1,13 +1,77 @@
 /* overrides */
 /* #8E59FF purple */
 /* #F3BC55: yellow */
+/* #56548C */
 
-a {
-  text-decoration: none;
+/* typography */
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy-ExtraBold.otf');
+  font-style: bolder;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy-Bold.ttf');
+  font-style: bold;
 }
 
 html {
-  background: url('../images/background-purple.svg') no-repeat center fixed;
+  font-family: Gilroy;
+}
+
+
+/* shared */
+.flex {
+  display: flex;
+}
+
+.flex-columns-2 > * {
+  flex: 1;
+}
+
+.flex-align_center {
+  align-items: center;
+}
+
+/* links */
+
+a {
+  color: #56548C;
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+html {
+  /* background: url('../images/background-purple.svg') no-repeat center fixed; */
+}
+
+/* header */
+
+.main-header {
+  padding: 50px 50px 0 50px;
+}
+
+/* nav */
+
+nav.top-nav {
+  justify-content: flex-end;
+}
+
+nav > * {
+  margin-left: 50px;
+  align-items: center;
+  display: flex;
+}
+
+nav > *:first-child {
+  margin-left: 0;
 }
 
 /*  */
@@ -31,25 +95,6 @@ html {
 }
 
 
-/* typography */
-
-@font-face {
-  font-family: 'Gilroy';
-  src: url('../fonts/Gilroy-ExtraBold.otf');
-  font-weight: 800;
-}
-
-@font-face {
-  font-family: 'Gilroy';
-  src: url('../fonts/Gilroy-Bold.ttf');
-  font-weight: 600;
-  font-style: bold;
-}
-
-html {
-  font-family: Gilroy;
-}
-
 .title {
   color: #8E59FF;;
   font-weight: 800;
@@ -64,27 +109,8 @@ html {
   box-shadow: 4px 4px 30px rgba(20, 0, 255, 0.25);
   color: white;
   display: block;
-  padding: 1rem 2rem;
-  text-align: center;
-  font-weight: 600;
-  font-size: 1.5rem;
-}
-
-/* main page */
-
-.image-container {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 2rem;
-}
-
-.image-container img {
-  width: 75%;
-  height: auto;
-}
-
-.title-container {
-  text-align: center;
+  padding: 17px 35px;
+  font-weight: bold;
 }
 
 /* random activity */
