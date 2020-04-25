@@ -129,6 +129,10 @@ nav > * {
   display: flex;
 }
 
+nav > :last-child {
+  margin-left: 16px;
+}
+
 /* main */
 
 main {
