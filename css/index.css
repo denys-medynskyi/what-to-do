@@ -43,6 +43,11 @@ h1 {
 }
 
 /* shared */
+
+img {
+  max-width: 100%;
+}
+
 .flex {
   display: flex;
 }
@@ -69,13 +74,24 @@ a {
 }
 
 html {
-  /* background: url('../images/background-purple.svg') no-repeat center fixed; */
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 body {
   background-color: var(--color-bg-light);
+}
+
+.site-container {
   margin: 0 auto;
   max-width: 1250px;
+}
+
+/* background */
+
+.background-image {
+  z-index: -1;
+  position: absolute;
 }
 
 /* header */
