@@ -105,9 +105,15 @@ body {
 
 /* background */
 
-.background-image {
-  z-index: -1;
+.background_image_text {
   position: absolute;
+  z-index: -1;
+}
+
+.background_image_pattern {
+  right: 0;
+  position: absolute;
+  z-index: -2;
 }
 
 /* header */
