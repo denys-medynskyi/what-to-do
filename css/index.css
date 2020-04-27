@@ -142,10 +142,11 @@ body {
 nav > * {
   align-items: center;
   display: flex;
+  margin-left: 32px;
 }
 
-nav > :last-child {
-  margin-left: 16px;
+nav > :first-child {
+  margin-left: 0;
 }
 
 /* main */
