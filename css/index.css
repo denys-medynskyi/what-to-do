@@ -15,6 +15,10 @@
   --color-tags: #C7BED3;
 }
 
+.color_tags {
+  color: var(--color-tags)
+}
+
 /* typography */
 
 @font-face {
@@ -33,7 +37,7 @@ html {
   font-family: Gilroy;
 }
 
-h1, h2, h3, h4, h5, h6, p, b, span {
+h1, h2, h3, h4, h5, h6, p, b, span, li {
   color: var(--color-text-body);
 }
 
@@ -47,6 +51,12 @@ h2 {
   font-size: 44px;
   font-weight: 800;
   line-height: 39px;
+}
+
+h3 {
+  color: var(--color-text-explainers);
+  font-size: 18px;
+  line-height: 27px;
 }
 
 /* shared */
@@ -252,4 +262,72 @@ main {
   animation-name: slide-pattern;
   margin-top: -1000px;
   width: 50%;
+}
+
+/* all-activities page */
+
+.all-activities_title {
+  margin-bottom: 32px;
+}
+
+.all-activities_subtitle {
+  margin-bottom: 42px;
+}
+
+.all-activities_left {
+  margin-right: 110px;
+}
+
+.all-activities_list_container {
+  margin-left: 34px;
+}
+
+.all-activities_list_container li {
+  line-height: 130%;
+  margin-bottom: 38px;
+}
+
+.all-activities_search {
+  background: var(--color-bg-light);
+  background-image: url('../images/loupe.svg') ;
+  background-position: 22px center;
+  background-repeat: no-repeat;
+  /*  */
+  border-radius: 70px;
+  border: 2px solid var(--color-tags);
+  box-sizing: border-box;
+  /* font */
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 22px;
+  text-align: left;
+  text-transform: capitalize;
+  /* sizing */
+  height: 55px;
+  padding: 17px 58px;
+  width: 370px;
+}
+
+.all-activities_search::placeholder {
+  color: var(--color-tags);
+}
+
+.tags-containers {
+  width: 370px;
+}
+
+.tag {
+  background: var(---color-bg-light);
+  border: 2px solid #C7BED3;
+  color: var(--color-tags);
+  box-sizing: border-box;
+  border-radius: 70px;
+  height: fit-content;
+  padding: 17px 35px;
+  margin-right: 16px;
+}
+
+.tag.is-selected {
+  color: white;
+  background: var(--color-accent);
 }
