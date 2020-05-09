@@ -12,7 +12,8 @@
   --color-accent-2: #FBD15B;
   --color-text-body: #56548C;
   --color-text-explainers: #7F7EAA;
-  --color-tags: #C7BED3;
+  --color-tags: #E5DCF1;
+  --color-error: #FF5959;
 }
 
 .color_tags {
@@ -33,6 +34,12 @@
   font-weight: bold;
 }
 
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy-Semibold.ttf');
+  font-weight: semibold;
+}
+
 html {
   font-family: Gilroy;
 }
@@ -50,13 +57,14 @@ h1 {
 h2 {
   font-size: 44px;
   font-weight: 800;
-  line-height: 39px;
+  line-height: 1.1;
 }
 
 h3 {
   color: var(--color-text-explainers);
   font-size: 18px;
-  line-height: 27px;
+  line-height: 1.5;
+  font-weight: semibold;
 }
 
 /* shared */
@@ -185,7 +193,9 @@ main {
   color: white;
   display: block;
   padding: 17px 35px;
-  font-weight: bold;
+  font-weight: semibold;
+  font-size: 16px;
+  text-transform: capitalize;
 }
 
 .btn:hover {
@@ -368,4 +378,10 @@ main {
 .tag.is-selected {
   color: white;
   background: var(--color-accent);
+}
+
+/* add-activity page */
+
+.add-activity_title {
+  margin-bottom: 32px;
 }

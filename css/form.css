@@ -1,0 +1,73 @@
+form label {
+  color: var(--color-text-body);
+  display: block;
+  margin-bottom: 10px;
+  font-weight: semibold;
+}
+
+form input:not([type=submit]) {
+  background-color: var(--color-bg-dark);
+  box-sizing: content-box;
+  caret-color: var(--color-accent);
+  color: var(--color-accent);
+  font-weight: semibold;
+  border: 2px solid var(--color-tags);
+  box-sizing: border-box;
+  border-radius: 70px;
+  height: 45px;
+  width: 370px;
+  padding: 10px 0 8px 18px;
+}
+
+form input:not([type=submit]):hover {
+  background-color: var(--color-bg-light);
+  border-color: transparent;
+  box-shadow: 0 0 0 4px #E7DBFF;
+}
+
+form input:not([type=submit]):focus {
+  background-color: var(--color-bg-light);
+  border-color: var(--color-accent);
+}
+
+form input:invalid {
+  border-color: var(--color-error);
+}
+
+input:invalid + span {
+  display: block;
+}
+
+form input[type="submit"] {
+  font-family: Gilroy;
+}
+
+form input::placeholder {
+  color: var(--color-tags);
+  font-family: Gilroy;
+  font-weight: semibold;
+}
+
+.input-container {
+  margin-bottom: 24px;
+}
+
+.input-container:last-child {
+  margin-bottom: 0;
+}
+
+.form-action {
+  margin-top: 32px;
+}
+
+.error-message {
+  margin-top: 10px;
+  color: var(--color-error);
+  display: none;
+  font-size: 12px;
+  padding-left: 18px;
+}
+
+form input:invalid .error-message {
+  display: block;
+}

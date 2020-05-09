@@ -5,6 +5,7 @@
   <title>What to do?</title>
   <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" type="text/css" href="css/form.css">
 </head>
 <body>
   <img class="background_image_pattern" src="images/pattern.svg"/>
@@ -29,17 +30,29 @@
 
     <main class="flex space-between">
       <section>
-        <section class="flex main-title_container">
-          <h1>Looking what to do?</h1>
-        </section>
-        <section class="main-actions_container flex vertical_center">
-          <a href="find-activity.html" class="btn">Find Activity</a>
-          <a href="/activities">Activities</a>
-        </section>
+        <h2 class="add-activity_title">Share your <br/> favourite activity</h2>
+
+        <form class="flex as-column" action="#">
+          <div class="input-container">
+            <label for="title">What is your favourite activity?</label>
+            <input type="text" name="title" placeholder="Sing your favourite song" required>
+            <span class="error-message">Name is required</span>
+          </div>
+
+          <div class="input-container">
+            <label for="url">Do you know any website for this activity?</label>
+            <input type="url" name="url" placeholder="Website URL">
+            <span class="error-message">URL is invalid</p>
+          </div>
+
+          <div class="form-action">
+            <input type="submit" value="Add Activity" class="btn"/>
+          </div>
+        </form>
       </section>
 
       <section>
-        <img src="images/illustration.svg"/>
+        <img src="images/add-activity.svg"/>
       </section>
     </main>
   </section>
