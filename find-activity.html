@@ -28,7 +28,18 @@
     <img id="js-animated-image" class="background_image_text is-animated is-animated-text" src="images/bg whattodo.svg"/>
 
     <main class="flex as-column centered">
-      <h2 class="find-activity_text-container" id="js-random-activity-container">Just Dance!</h2>
+      <section class="find-activity_text-container flex">
+        <h2 id="js-random-activity-text">
+          Just Dance!
+        </h2>
+
+
+        <a href="#" class="find-activity_random-activity-link flex is-hidden" id="js-random-activity-link" target="_blank">
+          <span class="find-activity_random-activity-link_text">Visit Website</span>
+          <img src="images/arrow.svg" />
+        </a>
+      </section>
+
       <section>
         <a href="" class="btn btn-secondary" id="js-stop-activity-generator">Stop</a>
         <a href="" class="btn is-hidden" id="js-restart-activity-generator">Try Again</a>

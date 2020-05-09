@@ -7,8 +7,9 @@ window.onload = (event) => {
     // 1. Onload start generating activity.
     window.generatingActivityInProgress = startGenerating(activities)
     startImageAnimation();
-    let stopTrigger = document.getElementById('js-stop-activity-generator')
-    let restartTrigger = document.getElementById('js-restart-activity-generator')
+    const stopTrigger = document.getElementById('js-stop-activity-generator')
+    const restartTrigger = document.getElementById('js-restart-activity-generator')
+    const activityLink = findRandomActivityLink()
 
     // 2. When `Stop` is clicked -> show `Try again`
     stopTrigger.addEventListener('click', (event) => {
@@ -17,6 +18,7 @@ window.onload = (event) => {
       stopImageAnimation();
       hideElement(stopTrigger);
       showElement(restartTrigger);
+      showElement(activityLink);
     })
 
     // 3. When `Try again` is clicked -> restart generating activity.
@@ -27,6 +29,7 @@ window.onload = (event) => {
 
       hideElement(restartTrigger);
       showElement(stopTrigger);
+      hideElement(activityLink);
     })
 
   }).catch(reason => console.log(reason.message));
@@ -53,19 +56,21 @@ function pickActivity (activities) {
 }
 
 function showActivity (activity) {
-  const activityContainer = document.getElementById('js-random-activity-container')
-  activityContainer.innerHTML = activity.title;
-  activityContainer.style.color = randomColor();
+  // manipulate text
+  const activityText = document.getElementById('js-random-activity-text')
+  activityText.innerHTML = activity.title;
+  activityText.style.color = randomColor();
 
-  // if (activity.url) {
-  //   const activityLink = findActivityLink()
-  //   if (!activityLink) {
-  //     debugger
-  //   }
-  //   activityLink.href = activity.url;
-  // }
+  // manipulate link
+  if (activity.url) {
+    const activityLink = findRandomActivityLink()
+    activityLink.href = activity.url;
+  }
 }
 
+function findRandomActivityLink () {
+  return document.getElementById('js-random-activity-link')
+}
 
 function showElement (element) {
   element.classList.remove('is-hidden');

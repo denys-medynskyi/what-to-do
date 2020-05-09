@@ -96,8 +96,6 @@ a {
   line-height: 22px;
   text-decoration: none;
   text-transform: capitalize;
-  /* increase click area */
-  padding: 16px;
 }
 
 a:hover {
@@ -228,6 +226,46 @@ main {
 
 .find-activity_text-container {
   margin: 100px 0;
+}
+
+.find-activity_random-activity-link {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  /* margin */
+  margin-left: 26px;
+  /* size */
+  width: 39px;
+  height: 39px;
+  /* style */
+  background: var(--color-accent-2);
+  box-shadow: 10px 10px 30px rgba(238, 222, 75, 0.3);
+  border-radius: 70px;
+  overflow: hidden;
+  /* animation */
+  transition: width .2s ease;
+}
+
+.find-activity_random-activity-link_text {
+  color: white;
+  font-size: 14px;
+  line-height: 17px;
+  transform: translateY(-35px);
+  padding-left: 19px;
+  padding-right: 13px;
+}
+
+.find-activity_random-activity-link:hover .find-activity_random-activity-link_text {
+  transform: translateY(1px);
+  transition: transform .2s ease-out .2s;
+}
+
+.find-activity_random-activity-link img {
+  margin-right: 13px;
+}
+
+.find-activity_random-activity-link:hover {
+  width: 160px;
 }
 
 /* js thingies */
