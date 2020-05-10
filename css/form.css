@@ -39,6 +39,7 @@ input:invalid + span {
 }
 
 form input[type="submit"] {
+  border: 0;
   font-family: Gilroy;
 }
 
