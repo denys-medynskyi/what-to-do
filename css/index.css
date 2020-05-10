@@ -10,7 +10,7 @@
   --color-bg-dark: #FAF7FE;
   --color-accent: #8E59FF;
   --color-accent-2: #FBD15B;
-  --color-text-body: #56548C;
+  --color-text-primary: #56548C;
   --color-text-explainers: #7F7EAA;
   --color-tags: #E5DCF1;
   --color-error: #FF5959;
@@ -45,7 +45,7 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6, p, b, span, li {
-  color: var(--color-text-body);
+  color: var(--color-text-primary);
 }
 
 h1 {
@@ -65,6 +65,16 @@ h3 {
   font-size: 18px;
   line-height: 1.5;
   font-weight: semibold;
+}
+
+p {
+  color: var(--color-text-primary);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+p:last-child {
+  margin-bottom: 0;
 }
 
 /* shared */
@@ -97,7 +107,7 @@ img {
 /* links */
 
 a {
-  color: var(--color-text-body);
+  color: var(--color-text-primary);
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
