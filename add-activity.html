@@ -6,7 +6,6 @@
   <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" type="text/css" href="css/index.css">
   <link rel="stylesheet" type="text/css" href="css/form.css">
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
   <img class="background_image_pattern" src="images/pattern.svg"/>
@@ -37,6 +36,14 @@
 
           <input type="hidden" name="_redirect" value="false" />
 
+          <input
+            type="checkbox"
+            name="_honeypot"
+            style="display:none"
+            tabindex="-1"
+            autocomplete="off"
+          />
+
           <div class="input-container">
             <label for="title">What is your favourite activity?</label>
             <input type="text" name="title" placeholder="Sing your favourite song" required>
@@ -52,8 +59,6 @@
           <div class="form-action">
             <input type="submit" value="Add Activity" class="btn"/>
           </div>
-
-          <div class="g-recaptcha" data-sitekey="6LfzKfUUAAAAAPiUmifXhDVJjaoh05TmQ1VXC113"></div>
         </form>
       </section>
 
