@@ -6,6 +6,7 @@
   <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" type="text/css" href="css/index.css">
   <link rel="stylesheet" type="text/css" href="css/form.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
   <img class="background_image_pattern" src="images/pattern.svg"/>
@@ -32,7 +33,10 @@
       <section>
         <h2 class="add-activity_title">Share your <br/> favourite activity</h2>
 
-        <form class="flex as-column" id="js-form" action="/">
+        <form class="flex as-column" action="https://submit-form.com/MzKFg3fIjtoopQnUrBj2g">
+
+          <input type="hidden" name="_redirect" value="false" />
+
           <div class="input-container">
             <label for="title">What is your favourite activity?</label>
             <input type="text" name="title" placeholder="Sing your favourite song" required>
@@ -48,6 +52,8 @@
           <div class="form-action">
             <input type="submit" value="Add Activity" class="btn"/>
           </div>
+
+          <div class="g-recaptcha" data-sitekey="6LfzKfUUAAAAAPiUmifXhDVJjaoh05TmQ1VXC113"></div>
         </form>
       </section>
 
@@ -56,61 +62,5 @@
       </section>
     </main>
   </section>
-
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-      https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
-
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyAN0diKfu50uLVYQtj6blCSSHWJgmJdSXM",
-      authDomain: "what-to-do-87856.firebaseapp.com",
-      databaseURL: "https://what-to-do-87856.firebaseio.com",
-      projectId: "what-to-do-87856",
-      storageBucket: "what-to-do-87856.appspot.com",
-      messagingSenderId: "655796388784",
-      appId: "1:655796388784:web:4860df1187c89379d5cc75",
-      measurementId: "G-JR2KQ6ZTP9"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-
-    var db = firebase.firestore();
-
-    // db.collection("activities").get().then((querySnapshot) => {
-    //   querySnapshot.forEach((doc) => {
-    //     console.log(doc.data())
-    //   });
-    // });
-
-    document.getElementById('js-form').addEventListener('submit', function (event) {
-      event.preventDefault();
-
-      let data = event.formData;
-
-      debugger
-
-      // 1.find inputs
-      // event.target.elements
-      // 2. get values
-      // 3. submit to firebase
-      // db.collection("activities").doc("LA").set({
-      //   name: "Los Angeles",
-      //   state: "CA",
-      //   country: "USA"
-      // })
-      // .then(function() {
-      //     console.log("Document successfully written!");
-      // })
-      // .catch(function(error) {
-      //     console.error("Error writing document: ", error);
-      // });
-    })
-  </script>
 </body>
 </html>
