@@ -2,7 +2,6 @@ form label {
   color: var(--color-text-body);
   display: block;
   margin-bottom: 10px;
-  font-weight: semibold;
 }
 
 form input:not([type=submit]) {
@@ -10,7 +9,6 @@ form input:not([type=submit]) {
   box-sizing: content-box;
   caret-color: var(--color-accent);
   color: var(--color-accent);
-  font-weight: semibold;
   border: 2px solid var(--color-tags);
   box-sizing: border-box;
   border-radius: 70px;
@@ -28,14 +26,6 @@ form input:not([type=submit]):hover {
 form input:not([type=submit]):focus {
   background-color: var(--color-bg-light);
   border-color: var(--color-accent);
-}
-
-form input:invalid {
-  border-color: var(--color-error);
-}
-
-input:invalid + span {
-  display: block;
 }
 
 form input[type="submit"] {
@@ -69,6 +59,10 @@ form input::placeholder {
   padding-left: 18px;
 }
 
-form input:invalid .error-message {
+form input.touched:invalid + span {
   display: block;
+}
+
+form input.touched:invalid {
+  border-color: var(--color-error);
 }

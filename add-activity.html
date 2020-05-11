@@ -50,8 +50,8 @@
 
           <div class="input-container">
             <label for="title">What is your favourite activity?</label>
-            <input type="text" name="title" placeholder="Sing your favourite song">
-            <span class="error-message">Name is required</span>
+            <input type="text" name="title" placeholder="Sing your favourite song" required minlength="5" required>
+            <span class="error-message">Name should have at least 5 characters</span>
           </div>
 
           <div class="input-container">
@@ -61,7 +61,7 @@
           </div>
 
           <div class="form-action">
-            <input type="submit" value="Add Activity" class="btn"/>
+            <input id='js-submit-add-activity' type="submit" value="Add Activity" class="btn"/>
           </div>
         </form>
       </section>
@@ -71,5 +71,19 @@
       </section>
     </main>
   </section>
+
+  <script>
+    const inputs = document.querySelectorAll('.input-container input')
+
+    function makeInputsTouched () {
+      inputs.forEach(function(input) {
+        input.classList.add('touched');
+      })
+    }
+
+    const submitBtn = document.getElementById('js-submit-add-activity')
+    submitBtn.addEventListener('click', makeInputsTouched)
+
+  </script>
 </body>
 </html>
