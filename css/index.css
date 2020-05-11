@@ -109,7 +109,6 @@ img {
 a {
   color: var(--color-text-primary);
   font-style: normal;
-  font-weight: bold;
   font-size: 18px;
   line-height: 22px;
   text-decoration: none;
@@ -169,6 +168,7 @@ nav > * {
   align-items: center;
   display: flex;
   margin-left: 32px;
+  font-size: 18px;
 }
 
 nav > :first-child {
@@ -204,7 +204,6 @@ main {
   display: block;
   padding: 17px 35px;
   font-weight: semibold;
-  font-size: 16px;
   text-transform: capitalize;
 }
 
