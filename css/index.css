@@ -11,7 +11,7 @@
   --color-accent: #8E59FF;
   --color-accent-2: #FBD15B;
   --color-text-primary: #56548C;
-  --color-text-explainers: #7F7EAA;
+  --color-text-secondary: #7F7EAA;
   --color-tags: #E5DCF1;
   --color-error: #FF5959;
 }
@@ -61,7 +61,7 @@ h2 {
 }
 
 h3 {
-  color: var(--color-text-explainers);
+  color: var(--color-text-secondary);
   font-size: 18px;
   line-height: 1.5;
   font-weight: semibold;
@@ -178,7 +178,7 @@ nav > :first-child {
 /* main */
 
 main {
-  padding: 80px 100px 0 100px;
+  padding: 88px 100px 0 100px;
 }
 
 .main-title_container {
@@ -405,4 +405,28 @@ main {
 
 .add-activity_title {
   margin-bottom: 32px;
+}
+
+/* contact us */
+
+.contact-us_title {
+  margin-bottom: 24px;
+}
+
+.contact-us_subtitle {
+  color: var(--color-text-secondary);
+  margin-bottom: 74px;
+}
+
+.contact-us_form {
+  background: #E4C9FF;
+  box-shadow: 10px 10px 50px rgba(142, 89, 255, 0.1);
+  border-radius: 20px;
+  padding: 50px;
+  position: relative;
+  top: -40px;
+}
+
+.contact-us_form .form-action {
+  margin-top: 8px;
 }

@@ -1,10 +1,11 @@
 form label {
-  color: var(--color-text-body);
+  color: var(--color-text-primary);
   display: block;
   margin-bottom: 10px;
+  padding-left: 5px;
 }
 
-form input:not([type=submit]) {
+form input:not([type=submit]), textarea {
   background-color: var(--color-bg-dark);
   box-sizing: content-box;
   caret-color: var(--color-accent);
@@ -17,13 +18,18 @@ form input:not([type=submit]) {
   padding: 10px 0 8px 18px;
 }
 
-form input:not([type=submit]):hover {
+form textarea {
+  min-height: 80px;
+  border-radius: 20px;
+}
+
+form input:not([type=submit]):hover, textarea:hover {
   background-color: var(--color-bg-light);
   border-color: transparent;
   box-shadow: 0 0 0 4px #E7DBFF;
 }
 
-form input:not([type=submit]):focus {
+form input:not([type=submit]):focus, textarea:focus {
   background-color: var(--color-bg-light);
   border-color: var(--color-accent);
 }
@@ -33,7 +39,7 @@ form input[type="submit"] {
   font-family: Gilroy;
 }
 
-form input::placeholder {
+form input::placeholder, textarea::placeholder {
   color: var(--color-tags);
   font-family: Gilroy;
   font-weight: semibold;
@@ -59,10 +65,11 @@ form input::placeholder {
   padding-left: 18px;
 }
 
-form input.touched:invalid + span {
+form .touched:invalid + span {
   display: block;
 }
 
-form input.touched:invalid {
+
+form .touched:invalid {
   border-color: var(--color-error);
 }

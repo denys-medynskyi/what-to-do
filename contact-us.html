@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>What to do?</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" type="text/css" href="css/form.css">
+</head>
+<body>
+  <img class="background_image_pattern" src="images/pattern.svg"/>
+
+  <section class="site-container">
+    <header class="main-header flex space-between">
+      <span class="flex vertical_center">
+        <a href="index.html">
+          <img src="images/logo.svg">
+        </a>
+      </span>
+
+      <nav class="flex space-between">
+        <a href="contact-us.html">Contact Us</a>
+        <a href="add-activity.html">Add Activity</a>
+        <a class="btn transparent" href="find-activity.html">Find Activity</a>
+      </nav>
+    </header>
+
+
+    <img class="background_image_text" src="images/bg whattodo.svg"/>
+
+    <main class="flex space-between">
+      <section class="flex as-column">
+        <h2 class="contact-us_title">Contact us!<br>That’s perfect activity.</h2>
+
+        <p class="contact-us_subtitle">
+          We are always open to any suggestions or ideas.
+          <br>
+          And we would love to hear from you any ideas<br>to improve this website or just to say hi :)
+        </p>
+
+        <div class="flex">
+          <img src="images/contact-us-mail.svg" />
+        </div>
+      </section>
+
+      <section class="flex">
+        <form class="flex as-column contact-us_form" action="https://submit-form.com/MzKFg3fIjtoopQnUrBj2g">
+
+          <input
+            type="hidden"
+            name="_redirect"
+            value="http://deny7ko.github.io/what-to-do/add-activity-thanks.html"
+          />
+
+          <input
+            type="checkbox"
+            name="_honeypot"
+            style="display:none"
+            tabindex="-1"
+            autocomplete="off"
+          />
+
+          <div class="input-container">
+            <label for="title">What is your name?</label>
+            <input type="text" name="name" placeholder="Name" required>
+            <span class="error-message">Name is required</span>
+          </div>
+
+          <div class="input-container">
+            <label for="title">Write your email</label>
+            <input type="email" name="email" placeholder="you@mail.com" required>
+            <span class="error-message">Email is required</span>
+          </div>
+
+          <div class="input-container">
+            <label for="message">What would you like to suggest?</label>
+            <textarea name="message" placeholder="Your message" required></textarea>
+            <span class="error-message">Message is required</span>
+          </div>
+
+          <div class="form-action">
+            <input id='js-submit-add-activity' type="submit" value="Send Message" class="btn"/>
+          </div>
+        </form>
+      </section>
+    </main>
+  </section>
+
+  <script>
+    const inputs = document.querySelectorAll('.input-container input,textarea')
+
+    function makeInputsTouched () {
+      inputs.forEach(function(input) {
+        input.classList.add('touched');
+      })
+    }
+
+    const submitBtn = document.getElementById('js-submit-add-activity')
+    submitBtn.addEventListener('click', makeInputsTouched)
+  </script>
+</body>
+</html>
