@@ -24,7 +24,6 @@ form input:not([type=submit]), textarea {
   border: 2px solid var(--color-tags);
   box-sizing: border-box;
   border-radius: 70px;
-  height: 45px;
   width: 100%;
   padding: 10px 0 8px 18px;
 }

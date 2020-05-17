@@ -1,8 +1,3 @@
-/* overrides */
-/* #8E59FF purple */
-/* #F3BC55: yellow */
-/* #56548C */
-
 /* color variables */
 
 :root {
@@ -200,6 +195,10 @@ main {
     margin-bottom: 0;
   }
 
+  .btn {
+    font-size: 24px;
+  }
+
   main .btn {
     text-align: center;
     width: 370px;
@@ -211,6 +210,10 @@ main {
 
   .is-hidden-on-mobile {
     display: none;
+  }
+
+  html {
+    font-size: 24px;
   }
 }
 
