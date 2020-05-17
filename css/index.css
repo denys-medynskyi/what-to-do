@@ -179,6 +179,31 @@ nav > :first-child {
 
 main {
   padding: 88px 100px 0 100px;
+
+}
+
+@media only screen and (max-device-width: 736px) {
+  /* For mobile phones: */
+  main {
+    flex-direction: column;
+  }
+
+  main > section {
+    margin-bottom: 50px;
+  }
+
+  main > section > * {
+    margin-bottom: 50px;
+  }
+
+  main > section:last-child {
+    margin-bottom: 0;
+  }
+
+  main .btn {
+    text-align: center;
+    width: 370px;
+  }
 }
 
 .main-title_container {
