@@ -204,10 +204,18 @@ main {
     text-align: center;
     width: 370px;
   }
+
+  img {
+    width: 100%;
+  }
+
+  .is-hidden-on-mobile {
+    display: none;
+  }
 }
 
 .main-title_container {
-  max-width: 523px;;
+  max-width: 523px;
   padding-top: 38px;
 }
 
