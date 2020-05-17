@@ -1,3 +1,14 @@
+form {
+  width: 370px;
+}
+
+@media only screen and (max-device-width: 736px) {
+  form {
+    align-items: center;
+    width: 100%;
+  }
+}
+
 form label {
   color: var(--color-text-primary);
   display: block;
@@ -14,7 +25,7 @@ form input:not([type=submit]), textarea {
   box-sizing: border-box;
   border-radius: 70px;
   height: 45px;
-  width: 370px;
+  width: 100%;
   padding: 10px 0 8px 18px;
 }
 
@@ -47,6 +58,12 @@ form input::placeholder, textarea::placeholder {
 
 .input-container {
   margin-bottom: 24px;
+}
+
+@media only screen and (max-device-width: 736px) {
+  .input-container {
+    width: 100%;
+  }
 }
 
 .input-container:last-child {
