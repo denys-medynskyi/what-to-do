@@ -238,7 +238,7 @@ main {
   box-shadow: 20px 20px 50px rgba(127, 75, 238, 0.3);
   color: white;
   display: block;
-  padding: 17px 35px;
+  padding: 19px 37px;
   font-weight: semibold;
   text-transform: capitalize;
 }
@@ -246,12 +246,13 @@ main {
 
 .btn.transparent {
   background: transparent;
-  border: 2px solid #E5DCF1;
+  border: 2px solid var(--color-tags);
   box-shadow: none;
   color: var(--color-text-primary)
 }
 
 .btn.transparent:hover {
+  background: var(--color-accent);
   border-color: transparent;
 }
 
