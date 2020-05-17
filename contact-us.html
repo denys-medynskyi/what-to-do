@@ -62,20 +62,42 @@
 
           <div class="input-container">
             <label for="title">What is your name?</label>
-            <input type="text" name="name" placeholder="Name" required>
-            <span class="error-message">Name is required</span>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              required
+              pattern="[a-zA-Z]+"
+              oninvalid="this.setCustomValidity('Name is required in English')"
+              oninput="this.setCustomValidity('')"
+            >
+            <span class="error-message">Name is required in English</span>
           </div>
 
           <div class="input-container">
             <label for="title">Write your email</label>
-            <input type="email" name="email" placeholder="you@mail.com" required>
+            <input
+              type="email"
+              name="email"
+              placeholder="you@mail.com"
+              required
+              oninvalid="this.setCustomValidity('Email is required')"
+              oninput="this.setCustomValidity('')"
+              >
             <span class="error-message">Email is required</span>
           </div>
 
           <div class="input-container">
             <label for="message">What would you like to suggest?</label>
-            <textarea name="message" placeholder="Your message" required></textarea>
-            <span class="error-message">Message is required</span>
+            <textarea
+              name="message"
+              required
+              pattern="[a-zA-Z]+"
+              oninvalid="this.setCustomValidity('Message is required in English')"
+              oninput="this.setCustomValidity('')"
+            >
+            </textarea>
+            <span class="error-message">Message is required in English</span>
           </div>
 
           <div class="form-action">
