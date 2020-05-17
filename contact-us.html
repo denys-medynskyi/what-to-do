@@ -90,13 +90,14 @@
           <div class="input-container">
             <label for="message">What would you like to suggest?</label>
             <textarea
+              placeholder="Type your message here..."
               name="message"
               required
               pattern="[a-zA-Z]+"
+              minlength="5"
               oninvalid="this.setCustomValidity('Message is required in English')"
               oninput="this.setCustomValidity('')"
-            >
-            </textarea>
+            ></textarea>
             <span class="error-message">Message is required in English</span>
           </div>
 
