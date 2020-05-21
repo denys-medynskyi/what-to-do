@@ -5,16 +5,12 @@
   <title>What to do?</title>
   <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" type="text/css" href="css/index.css">
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
-  />
 </head>
 <body>
   <img class="background_image_pattern" src="images/pattern.svg"/>
 
   <section class="site-container">
-    <!-- <header class="main-header flex space-between">
+    <header class="main-header flex space-between">
       <span class="flex vertical_center">
         <a href="index.html">
           <img src="images/logo.svg">
@@ -26,34 +22,25 @@
         <a href="add-activity.html">Add Activity</a>
         <a class="btn transparent" href="find-activity.html">Find Activity</a>
       </nav>
-    </header> -->
+    </header>
 
 
     <img class="background_image_text" src="images/bg whattodo.svg"/>
 
     <main class="flex space-between">
       <section>
-        <section id="animation-step-1" class="flex main-title_container is-invisible">
+        <section class="flex main-title_container">
           <h1>Looking for what to do?</h1>
         </section>
         <section class="main-actions_container flex vertical_center">
-          <a href="find-activity.html" class="btn">Get Started!</a>
+          <a href="find-activity.html" class="btn">Find Activity</a>
         </section>
       </section>
-      <section class="right-container">
-        <img src="images/index/character1.svg"/>
+
+      <section>
+        <img src="images/illustration.svg"/>
       </section>
     </main>
-
-    <button id="js-animation-trigger" onClick="startAnimation()">start animation</button>
   </section>
-
-  <script>
-    function startAnimation() {
-      const stepOne = document.getElementById('animation-step-1')
-      stepOne.classList.add('slide-in');
-    }
-
-  </script>
 </body>
 </html>
