@@ -1,13 +1,17 @@
 [
   {
-    "title": "подивись докуменалку"
+    "title": "watch a documentary"
   },
   {
-    "title": "прочитай про випадкову країну",
+    "title": "read about random country",
     "url": "https://random.country/"
   },
   {
-    "title": "займись йогою",
+    "title": "do some yoga",
     "url": "https://www.youtube.com/watch?v=y2cBph8IswI"
+  },
+  {
+    "title": "be inspired by beatiful web design",
+    "url": "https://www.awwwards.com"
   }
 ]
