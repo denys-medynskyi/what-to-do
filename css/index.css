@@ -125,7 +125,8 @@ a:disabled {
 
 html {
   overflow-x: hidden;
-  overflow-y: hidden;
+  /* THIS breaks animation prevents it from triggering scroll event */
+  /* overflow-y: hidden; */
 }
 
 body {
