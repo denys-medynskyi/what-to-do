@@ -21,7 +21,7 @@ form input:not([type=submit]), textarea {
   box-sizing: content-box;
   caret-color: var(--color-accent);
   color: var(--color-accent);
-  border: 2px solid var(--color-light);
+  border: 2px solid var(--color-tags);
   box-sizing: border-box;
   border-radius: 70px;
   width: 100%;
@@ -50,7 +50,7 @@ form input[type="submit"] {
 }
 
 form input::placeholder, textarea::placeholder {
-  color: var(--color-light);
+  color: var(--color-tags);
   font-family: Gilroy;
   font-weight: semibold;
 }

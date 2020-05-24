@@ -1,4 +1,4 @@
-Link/* color variables */
+/* color variables */
 
 :root {
   --color-bg-light: #FDFCFF;
@@ -7,12 +7,12 @@ Link/* color variables */
   --color-accent-2: #FBD15B;
   --color-text-primary: #56548C;
   --color-text-secondary: #7F7EAA;
-  --color-light: #E5DCF1;
+  --color-tags: #E5DCF1;
   --color-error: #FF5959;
 }
 
-.color_light {
-  color: var(--color-light)
+.color_tags {
+  color: var(--color-tags)
 }
 
 /* typography */
@@ -152,7 +152,7 @@ body {
 
 /* header */
 
-.header-and-footer-container {
+.main-header {
   padding: 37px 50px 0 50px;
 }
 
@@ -245,7 +245,7 @@ main {
 
 .btn.transparent {
   background: transparent;
-  border: 2px solid var(--color-light);
+  border: 2px solid var(--color-tags);
   box-shadow: none;
   color: var(--color-text-primary)
 }
@@ -399,7 +399,7 @@ main {
   background-repeat: no-repeat;
   /*  */
   border-radius: 70px;
-  border: 2px solid var(--color-light);
+  border: 2px solid var(--color-tags);
   box-sizing: border-box;
   /* font */
   font-size: 18px;
@@ -414,17 +414,17 @@ main {
 }
 
 .all-activities_search::placeholder {
-  color: var(--color-light);
+  color: var(--color-tags);
 }
 
-.light-containers {
+.tags-containers {
   width: 370px;
 }
 
 .tag {
   background: var(---color-bg-light);
   border: 2px solid #C7BED3;
-  color: var(--color-light);
+  color: var(--color-tags);
   box-sizing: border-box;
   border-radius: 70px;
   height: fit-content;
@@ -466,36 +466,4 @@ main {
 
 .contact-us_form .form-action {
   margin-top: 8px;
-}
-
-/* footer */
-footer {
-  margin-top: 20px;
-}
-
-footer span, footer a {
-  color: var(--color-light);
-  font-size: 14px;
-}
-
-footer a:hover {
-  color: var(--color-accent);
-}
-
-footer a::after {
-  content: '';
-  display: inline-block;
-  height: 12px;
-  width: 14px;
-}
-
-footer a:hover::after {
-  background-image: url('../images/footer-link-arrow.svg');
-  content: '';
-  display: inline-block;
-  height: 12px;
-  width: 14px;
-  position: relative;
-  bottom: 5px;
-  left: 2px;
 }
