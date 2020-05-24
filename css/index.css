@@ -452,7 +452,7 @@ main {
 
 .contact-us_subtitle {
   color: var(--color-text-secondary);
-  margin-bottom: 74px;
+  margin-bottom: 36px;
 }
 
 .contact-us_form {
@@ -470,7 +470,8 @@ main {
 
 /* footer */
 footer {
-  margin-top: 20px;
+  position: absolute;
+  bottom: 20px;
 }
 
 footer span, footer a {
