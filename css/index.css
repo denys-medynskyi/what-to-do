@@ -500,3 +500,14 @@ footer a:hover::after {
   bottom: 5px;
   left: 2px;
 }
+
+/* animations */
+
+.is-invisible {
+  visibility: hidden;
+}
+
+.animation-trigger {
+  position: absolute;
+  left: 50
+}
