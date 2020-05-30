@@ -4,7 +4,7 @@
 
 .animation-trigger {
   position: absolute;
-  left: 50%
+  left: 45%
 }
 
 .speech-bubble {
@@ -25,13 +25,12 @@
 	bottom: 0;
 	left: 50%;
 	width: 0;
-	height: 0;
-  border: 30px solid transparent;
-	border-top-color: white;
-	border-bottom: 0;
-	border-left: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 30px solid white;
 	margin-left: -14px;
-	margin-bottom: -30px;
+  margin-bottom: -30px;
 }
 
 .characters {
@@ -48,7 +47,7 @@
 }
 
 /* slide in animation */
-.animated-element {
+[data-animation-type="slide-in"] {
   transition: transform 2s ease-out;
   transform: translateX(0); /* we need to set transform to make animation work */
 }
@@ -62,8 +61,8 @@
 }
 
 /* fade in animation */
-.animated-fade-in-element {
-  opacity: 0;
+[data-animation-type="fade-in"] {
+  opacity: 1;
 }
 
 @keyframes fade-in {
@@ -75,7 +74,7 @@
   }
 }
 
-.animated-fade-out-element {
+[data-animation-typee="fade-out"] {
   opacity: 1;
 }
 
