@@ -1,0 +1,27 @@
+.is-invisible {
+  visibility: hidden;
+}
+
+.animation-trigger {
+  position: absolute;
+  left: 50%
+}
+
+.animated-element {
+  transition: transform 2s ease-out;
+  transform: translateX(0); /* we need to set transform to make animation work */
+}
+
+@keyframes slide-in {
+  100% { transform: translateX(0%); }
+}
+
+.slide-in {
+  animation: slide-in 2s forwards;
+}
+
+@keyframes slide-in {
+  100% { transform: translateX(0%); }
+}
+
+

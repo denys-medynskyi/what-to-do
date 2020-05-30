@@ -126,7 +126,7 @@ a:disabled {
 html {
   overflow-x: hidden;
   /* THIS breaks animation prevents it from triggering scroll event */
-  /* overflow-y: hidden; */
+  overflow-y: hidden;
 }
 
 body {
@@ -500,15 +500,4 @@ footer a:hover::after {
   position: relative;
   bottom: 5px;
   left: 2px;
-}
-
-/* animations */
-
-.is-invisible {
-  visibility: hidden;
-}
-
-.animation-trigger {
-  position: absolute;
-  left: 50
 }
