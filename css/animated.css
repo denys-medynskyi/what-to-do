@@ -7,6 +7,47 @@
   left: 50%
 }
 
+.speech-bubble {
+	position: relative;
+  border-radius: 10px;
+  background: white;
+  bottom: 50px;
+  box-shadow: 10px 10px 50px rgba(142, 89, 255, 0.1);
+}
+
+.speech-bubble p {
+  padding: 25px;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+  border: 30px solid transparent;
+	border-top-color: white;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -14px;
+	margin-bottom: -30px;
+}
+
+.characters {
+  align-items: flex-end;
+}
+
+.characters > * {
+  margin-right: 32px;
+  width: 200px;
+}
+
+.characters > *:last-child {
+  margin-right: 0;
+}
+
+/* slide in animation */
 .animated-element {
   transition: transform 2s ease-out;
   transform: translateX(0); /* we need to set transform to make animation work */
@@ -20,8 +61,37 @@
   animation: slide-in 2s forwards;
 }
 
-@keyframes slide-in {
-  100% { transform: translateX(0%); }
+/* fade in animation */
+.animated-fade-in-element {
+  opacity: 0;
 }
 
+@keyframes fade-in {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
 
+.animated-fade-out-element {
+  opacity: 1;
+}
+
+.fade-in {
+  animation: fade-in 2s forwards;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+.fade-out {
+  animation: fade-out 2s forwards;
+}
